@@ -24,7 +24,7 @@ function hoverDraw() {
   squares.forEach((square) => {
     square.addEventListener('mouseenter', () => {
       square.style.backgroundColor = `rgb(${randomNumberGenerator()}, ${randomNumberGenerator()}, ${randomNumberGenerator()})`;
-    });
+    }, {once : true});
   });
 }
 
@@ -51,5 +51,6 @@ resetIcon.addEventListener('click', () => {
   squares.forEach((square) => {
     square.style.backgroundColor = 'white';
   });
+  hoverDraw();
 });
 
