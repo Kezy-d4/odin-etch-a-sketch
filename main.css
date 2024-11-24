@@ -13,9 +13,9 @@
   gap: 10px;
 }
 
-.top-bar {
+.header {
   display: flex;
-  width: 650px;
+  width: 550px;
   justify-content: space-between;
 }
 
@@ -24,10 +24,14 @@ h1 {
   font-size: 3em;
 }
 
+img:hover {
+  border: solid grey 1px;
+}
+
 .grid {
   border: solid red 1px;
-  height: 650px;
-  width: 650px;
+  height: 550px;
+  width: 550px;
   display: flex;
   flex-direction: column;
 }
@@ -45,4 +49,9 @@ h1 {
 
 button {
   padding: 5px 8px;
+}
+
+p {
+  color: grey;
+  font-weight: bold;
 }
