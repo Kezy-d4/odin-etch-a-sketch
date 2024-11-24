@@ -9,6 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .grid {
@@ -28,4 +30,8 @@
 .square {
   border: solid grey 1px;
   flex: 1;
+}
+
+button {
+  padding: 5px 8px;
 }

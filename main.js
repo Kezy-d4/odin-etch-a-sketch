@@ -19,4 +19,17 @@ function constructGrid(dimensions) {
   console.log(numberOfSquares.length);
 }
 
-constructGrid(100);
+constructGrid(16);
+
+let dimensionsButton = document.querySelector('.change-dimensions');
+dimensionsButton.addEventListener('click', () => {
+  let userDimensions = parseInt(prompt('Number of squares per side? No more than 100. Default is 16.'));
+
+  if (Number.isInteger(userDimensions) && (userDimensions >= 1 && userDimensions <= 100)) {
+    removeAllChildNodes(grid);
+    constructGrid(userDimensions);
+  } else {
+    alert('Grid unchanged.');
+  }
+
+});
