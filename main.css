@@ -18,10 +18,15 @@
   width: 550px;
   justify-content: space-between;
 }
+
 a {
   color: red;
   font-size: 1.5em;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 img:hover {
