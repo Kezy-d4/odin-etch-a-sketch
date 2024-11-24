@@ -13,6 +13,16 @@
   gap: 10px;
 }
 
+.top-bar {
+  display: flex;
+  gap: 225px;
+}
+
+h1 {
+  color: red;
+  font-size: 3em;
+}
+
 .grid {
   border: solid red 1px;
   height: 650px;
