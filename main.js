@@ -31,9 +31,9 @@ function hoverDraw() {
 constructGrid(16);
 hoverDraw();
 
-let dimensionsButton = document.querySelector('.change-dimensions');
-dimensionsButton.addEventListener('click', () => {
-  let userDimensions = parseInt(prompt('Number of squares per side? No more than 100. Default is 16.'));
+let newGridBtn = document.querySelector('.generate-new-grid');
+newGridBtn.addEventListener('click', () => {
+  let userDimensions = parseInt(prompt('How many squares per side? No more than 100. Default is 16.'));
 
   if (Number.isInteger(userDimensions) && (userDimensions >= 1 && userDimensions <= 100)) {
     removeAllChildNodes(grid);
