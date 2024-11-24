@@ -7,7 +7,6 @@ function constructGrid(dimensions) {
 
     for (let squareCounter = 1; squareCounter <= dimensions; squareCounter++) {
       let square = document.createElement('div');
-      square.textContent = squareCounter;
       square.className = 'square';
       row.appendChild(square);
     }
@@ -20,4 +19,4 @@ function constructGrid(dimensions) {
   console.log(numberOfSquares.length);
 }
 
-constructGrid(16);
+constructGrid(100);

@@ -13,17 +13,19 @@
 
 .grid {
   border: solid red 1px;
-  /* height: 750px; */
-  /* width: 750px; */
+  height: 960px;
+  width: 960px;
+  display: flex;
+  flex-direction: column;
 }
 
 .row {
   display: flex;
   flex-direction: row;
+  flex: 1;
 }
 
 .square {
-  /* height: 30px; */
-  /* width: 30px; */
   border: solid grey 1px;
+  flex: 1;
 }
