@@ -15,8 +15,8 @@
 
 .grid {
   border: solid red 1px;
-  height: 960px;
-  width: 960px;
+  height: 650px;
+  width: 650px;
   display: flex;
   flex-direction: column;
 }

@@ -19,7 +19,17 @@ function constructGrid(dimensions) {
   console.log(numberOfSquares.length);
 }
 
+function hoverDraw() {
+  let squares = document.querySelectorAll('.square');
+  squares.forEach((square) => {
+    square.addEventListener('mouseenter', () => {
+      square.style.backgroundColor = 'red';
+    });
+  });
+}
+
 constructGrid(16);
+hoverDraw();
 
 let dimensionsButton = document.querySelector('.change-dimensions');
 dimensionsButton.addEventListener('click', () => {
@@ -28,8 +38,9 @@ dimensionsButton.addEventListener('click', () => {
   if (Number.isInteger(userDimensions) && (userDimensions >= 1 && userDimensions <= 100)) {
     removeAllChildNodes(grid);
     constructGrid(userDimensions);
+    hoverDraw();
   } else {
     alert('Grid unchanged.');
   }
-
 });
+
