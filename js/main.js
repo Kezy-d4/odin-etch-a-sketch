@@ -23,13 +23,32 @@ function hoverDraw() {
   let squares = document.querySelectorAll('.square');
   squares.forEach((square) => {
     square.addEventListener('mouseenter', () => {
-      square.style.backgroundColor = `rgb(${randomNumberGenerator()}, ${randomNumberGenerator()}, ${randomNumberGenerator()})`;
+      square.style.backgroundColor = `rgb(${rng255()}, ${rng255()}, ${rng255()})`;
     }, {once : true});
+  });
+}
+
+function decrementSquareOpacity() {
+  let squares = document.querySelectorAll('.square');
+  squares.forEach((square) => {
+    square.addEventListener('click', () => {
+      
+      let opacity = parseFloat(getComputedStyle(square).getPropertyValue('opacity'));
+
+      if (!opacity) {
+        square.style.opacity = '1';
+      } else {
+        opacity = (opacity - 0.1).toFixed(1);
+        square.style.opacity = `${opacity}`;
+      }
+      console.log(getComputedStyle(square).getPropertyValue('opacity'));
+    });
   });
 }
 
 constructGrid(16);
 hoverDraw();
+decrementSquareOpacity();
 
 let newGridBtn = document.querySelector('.generate-new-grid');
 newGridBtn.addEventListener('click', () => {
@@ -39,6 +58,7 @@ newGridBtn.addEventListener('click', () => {
     removeAllChildNodes(grid);
     constructGrid(userDimensions);
     hoverDraw();
+    decrementSquareOpacity();
   } else {
     alert('Grid unchanged.');
   }
@@ -47,9 +67,11 @@ newGridBtn.addEventListener('click', () => {
 let resetIcon = document.querySelector('img');
 resetIcon.addEventListener('click', () => {
   let squares = document.querySelectorAll('.square');
+  console.log(squares.length);
 
   squares.forEach((square) => {
     square.style.backgroundColor = 'white';
+    square.style.opacity = '1';
   });
   hoverDraw();
 });

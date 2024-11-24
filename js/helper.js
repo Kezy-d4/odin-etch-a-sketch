@@ -4,6 +4,6 @@ function removeAllChildNodes(parent) {
   }
 }
 
-function randomNumberGenerator() {
+function rng255() {
   return Math.floor(Math.random() * 256);
 }
