@@ -15,7 +15,8 @@
 
 .top-bar {
   display: flex;
-  gap: 225px;
+  width: 650px;
+  justify-content: space-between;
 }
 
 h1 {
