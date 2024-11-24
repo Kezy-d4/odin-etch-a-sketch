@@ -44,3 +44,12 @@ newGridBtn.addEventListener('click', () => {
   }
 });
 
+let resetIcon = document.querySelector('img');
+resetIcon.addEventListener('click', () => {
+  let squares = document.querySelectorAll('.square');
+
+  squares.forEach((square) => {
+    square.style.backgroundColor = 'white';
+  });
+});
+
